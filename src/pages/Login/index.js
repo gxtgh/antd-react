@@ -7,10 +7,12 @@ class Login extends React.Component {
   onFinish = (data) =>{
     this.$post('/user/login',data)
     .then(data=>{
+      // console.log(data)
       this.props.dispatch(addUserInfo(data))
-      this.props.history.push({
-        pathname: '/dashboard'
-      });
+      window.location.href="/dashboard"
+      // this.props.history.push({
+      //   pathname: '/user'
+      // });
     }).catch(error=>{
       console.log(error)
     }).finally(()=>{

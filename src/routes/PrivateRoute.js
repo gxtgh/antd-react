@@ -1,10 +1,10 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class PrivateRoute extends React.Component{
   componentDidMount(){
-    console.log(this.props)
+    // console.log(this.props)
   }
   handerRender = ()=> {
     const {component: ComposedComponent} = this.props;

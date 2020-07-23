@@ -1,4 +1,5 @@
-import {TEST_ADD, ADD_USER_INFO} from './actionTypes';
+import {TEST_ADD, ADD_USER_INFO, DELETE_USER_INFO} from './actionTypes';
+
 let list = sessionStorage.getItem('list')?JSON.parse(sessionStorage.getItem('list')):[];
 let userInfo = sessionStorage.getItem('userInfo')?JSON.parse(sessionStorage.getItem('userInfo')):[];
 const initilState = {
@@ -19,6 +20,12 @@ export default function(state = initilState, action){
       sessionStorage.setItem('userInfo',JSON.stringify(action.payload));
       return {
         userInfo:{account:action.payload.account}
+      }
+    }
+    case DELETE_USER_INFO:{
+      sessionStorage.removeItem('userInfo');
+      return {
+        userInfo:{}
       }
     }
     default:

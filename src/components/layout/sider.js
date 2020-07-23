@@ -22,7 +22,11 @@ export default class LayoutSider extends React.Component {
   render(){
     return (
       <Sider className="layoutSide" collapsed={this.state.collapsed}>
-        <div className="layouSideLogo" onClick={this.toggleCollapsed}>数据中台</div>
+        <div className="layouSideLogo" onClick={this.toggleCollapsed}>
+          {
+            this.state.collapsed?'数据中台':<Link to="/"><span>数据中台</span></Link>
+          }
+        </div>
         <Menu
             mode="inline"
             theme="dark"

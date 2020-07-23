@@ -1,41 +1,41 @@
 import React from 'react';
 import { Layout } from 'antd';
-import {Route} from 'react-router-dom';
+import {Route } from 'react-router-dom';
+
 import LayoutSider from './sider';
 import LayoutHeader from './header';
-
-
-import Dashboard from '../../pages/Dashboard';
-import UserIndex from '../../pages/User';
 
 import './index.scss';
 const { Content } = Layout;
 export default class LayoutIndex extends React.Component {
-    state = {
-        collapsed: false
-    }
-    componentDidMount() {
+  state = {
+    collapsed: false
+  }
+  componentDidMount() {
+    // console.log(this.props)
+  }
 
-    }
+  toggleCollapsed = () =>{
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
 
-    toggleCollapsed = () =>{
-        this.setState({
-            collapsed: !this.state.collapsed
-        });
-    }
-
-    render() {
-        return (
-            <Layout className="layoutContainer">
-                <LayoutSider/>
-                <Layout>
-                    <LayoutHeader />
-                    <Content className="layoutContent">
-                        <Route path="/dashboard" component={Dashboard} />
-                        <Route path="/user/index" component={UserIndex} />
-                    </Content>
-                </Layout>
-            </Layout>
-        )
-    }
+  render() {
+    return (
+      <Layout className="layoutContainer">
+        <LayoutSider/>
+        <Layout>
+          <LayoutHeader/>
+          <Content className="layoutContent">
+            {
+              this.props.routes.map((item, index) => {
+                return(<Route key={index} path={item.path} exact={item.exact} component={item.component}/>)
+              })
+            }
+          </Content>
+        </Layout>
+      </Layout>
+    )
+  }
 }
