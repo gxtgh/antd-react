@@ -31,6 +31,10 @@ let routes = [
     component: Test
   },
   {
+    path: '/404',
+    component: NotFound
+  },
+  {
     // path: '/user',
     component: Layout,
     requiresAuth: true,
@@ -45,10 +49,6 @@ let routes = [
         exact: true,
       }
     ]
-  },
-  {
-    path: '/404',
-    component: NotFound
   },
   {
     path: '*',

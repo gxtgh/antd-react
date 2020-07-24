@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import {
   PieChartOutlined,
   MailOutlined,
@@ -18,6 +18,9 @@ export default class LayoutSider extends React.Component {
         collapsed: !this.state.collapsed
     });
   } 
+  componentDidMount(){
+    // console.log(this)
+  }
 
   render(){
     return (

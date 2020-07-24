@@ -4,7 +4,7 @@ import { connect} from 'react-redux';
 import {
   CaretDownOutlined,
 } from '@ant-design/icons';
-
+import { withRouter } from 'react-router-dom';
 import { deleteUserInfo } from '../../store/actions';
 
 const { Header } = Layout;
@@ -17,15 +17,12 @@ class LayoutHeader extends React.Component {
   // }
   logout =() =>{
     this.$post('/user/logout').then(res=>{
-      // console.log(res);
       this.props.dispatch(deleteUserInfo());
       notification.open({
         message: '退出成功',
         duration:3
       });
-      setTimeout(()=>{
-        window.location.href="/login";
-      },0)
+      this.props.history.push('/login');
     })
     
   }
@@ -57,4 +54,4 @@ const mapStateToProps = state => ({
   userInfo: state.reducers.userInfo
 })
 
-export default connect(mapStateToProps)(LayoutHeader);
+export default connect(mapStateToProps)(withRouter(LayoutHeader));
