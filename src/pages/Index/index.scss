@@ -1,0 +1,105 @@
+.index-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b102e;
+  .index-header{
+    // border: 1px solid red;
+    color: #ffffff;
+    .index-header-left-block,.index-header-right-block{
+      display: flex; 
+      height: 40px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .index-header-block{
+      height:100%;
+      flex:1;
+      &.left{
+        background-image: linear-gradient(to right, #2d1f47, #476ed5);
+      }
+      &.right{
+        background-image: linear-gradient(to left, #2d1f47, #476ed5);
+      }
+    }
+    .index-header-block-arrow{
+      width: 0; 
+      height: 0;
+      border-width: 20px;
+      border-style: solid;
+      position: relative;
+      &.left{
+        border-color: transparent transparent #476ed5 #476ed5;
+        margin-right: 10px;
+        
+      }
+      &.left::after{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 40px;
+        width: 15px;
+        height: 15px;
+        border: 1.5px solid #5c619e;
+        border-radius: 50%;
+      }
+      &.right{
+        border-color: transparent #476ed5 #476ed5  transparent;
+        margin-left: 10px;
+      }
+    }
+    .index-header-center{
+      text-align: center;
+      // border: 1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bolder;
+      letter-spacing: 3px;
+      background-image: linear-gradient(to bottom, #ffffff , #084a92 );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .index-content {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    .index-content-top {
+      height: 100px;
+      margin: 10px;
+      border: 1px solid red;
+    }
+    .index-content-bottom {
+      flex: 1;
+      display: flex;
+      .index-content-bottom-left{
+        flex: 0.6;
+        margin: 10px;
+        border: 1px solid red;
+      }
+      .index-content-bottom-right {
+        flex: 0.4;
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        .index-content-bottom-right-item {
+          width: calc(50% - 20px);
+          margin: 10px;
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+  .index-footer {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 45px;
+    border: 1px solid red;
+    color: #ffffff;
+    text-align: right;
+  }
+}

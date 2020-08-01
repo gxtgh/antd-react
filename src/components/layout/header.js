@@ -29,9 +29,6 @@ class LayoutHeader extends React.Component {
   render () {
     return (
       <Header className="layoutHeader">
-        {/* <Breadcrumb separator=">>" className="breadcurmbContainer">
-          <Breadcrumb.Item href="/dashboard">概览</Breadcrumb.Item>
-        </Breadcrumb> */}
         <div></div>
         <div className="headerRight">
           <Dropdown overlay={()=>

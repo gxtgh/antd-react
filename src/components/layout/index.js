@@ -4,7 +4,7 @@ import {Route } from 'react-router-dom';
 
 import LayoutSider from './sider';
 import LayoutHeader from './header';
-
+import Breadcurmb from './breadcrumb'
 import './index.scss';
 const { Content } = Layout;
 export default class LayoutIndex extends React.Component {
@@ -27,6 +27,7 @@ export default class LayoutIndex extends React.Component {
         <LayoutSider/>
         <Layout>
           <LayoutHeader/>
+          <Breadcurmb />
           <Content className="layoutContent">
             {
               this.props.routes.map((item, index) => {

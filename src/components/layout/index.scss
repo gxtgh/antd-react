@@ -9,11 +9,6 @@
     padding: 0 15px;
     background: transparent;
     box-shadow: 0 1px 4px rgba(0,21,41,0.08);
-    .breadcurmbContainer{
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
     .headerRight{
       display: flex;
       align-items: center;
@@ -42,5 +37,9 @@
   }
   .ant-layout{
     background: #fff;
+  }
+  .layoutBreadcrumb {
+    padding: 10px 15px;
+    box-shadow: 0 1px 4px rgba(0,21,41,0.08);
   }
 }

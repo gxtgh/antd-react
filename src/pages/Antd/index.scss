@@ -1,0 +1,11 @@
+.antd-container {
+  button + button {
+    margin-left: 15px;
+  }
+  .ant-card + .ant-card {
+    margin-top: 20px;
+  }
+  .ml-20 {
+    margin-left: 20px;
+  }
+}

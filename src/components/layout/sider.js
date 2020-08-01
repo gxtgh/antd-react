@@ -44,6 +44,11 @@ export default class LayoutSider extends React.Component {
                     <Link to="/user/index"><span>用户列表</span></Link>
                 </Menu.Item>
             </SubMenu>
+            <SubMenu key="sub2" icon={<MailOutlined />} title="Antd">
+                <Menu.Item key="3">
+                    <Link to="/antd/index"><span>antd</span></Link>
+                </Menu.Item>
+            </SubMenu>
         </Menu>
     </Sider>
     )

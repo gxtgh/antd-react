@@ -11,7 +11,7 @@ class Login extends React.Component {
       this.props.dispatch(addUserInfo(data))
       window.location.href="/dashboard"
       // this.props.history.push({
-      //   pathname: '/user'
+      //   pathname: '/dashboard'
       // });
     }).catch(error=>{
       console.log(error)

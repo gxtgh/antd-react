@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 
 import  Dashboard from '../pages/Dashboard';
 import UserIndex from '../pages/User';
+import Antd from '../pages/Antd';
 
 let routes = [
   // 示例
@@ -47,7 +48,11 @@ let routes = [
         path: '/user/index', 
         component: UserIndex,
         exact: true,
-      }
+      },
+      { 
+        path: '/antd/index', 
+        component: Antd
+      },
     ]
   },
   {
