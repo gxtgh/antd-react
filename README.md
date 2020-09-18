@@ -14,3 +14,12 @@ npm install
 ```
 生产环境: npm run build
 ```
+
+### 依赖框架
+```
+react v16.13.1
+react-redux v7.2.0
+antd v4.3.4
+axios v0.19.2
+mockjs v1.1.0
+```

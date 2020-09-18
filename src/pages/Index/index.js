@@ -32,6 +32,31 @@ class Index extends React.Component {
         </header>
         <div className="index-content">
           <div className="index-content-top">
+          <div className="index-content-top-item">
+            <div className="title">当日访客数</div>
+            <div className="value">2000</div>
+            <div className="total">累计5000</div>
+          </div>
+          <div className="index-content-top-item">
+            <div className="title">当日注册数</div>
+            <div className="value">2000</div>
+            <div className="total">累计5000</div>
+          </div>
+          <div className="index-content-top-item">
+            <div className="title">当日下载数</div>
+            <div className="value">2000</div>
+            <div className="total">累计5000</div>
+          </div>
+          <div className="index-content-top-item">
+            <div className="title">当日个人VIP数</div>
+            <div className="value">2000</div>
+            <div className="total">累计5000</div>
+          </div>
+          <div className="index-content-top-item">
+            <div className="title">当日企业VIP数</div>
+            <div className="value">2000</div>
+            <div className="total">累计5000</div>
+          </div>
           </div> 
           <div className="index-content-bottom">
             <div className="index-content-bottom-left"></div>
